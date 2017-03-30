@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Claire Hughes Assignment 2</title>
+    <link rel="stylesheet" type="text/css" href="styles/Assignment2.css"/>
+    <script>
+         function ShowInfo()
+        {
+           
+            var fullname=document.getElementById("fullname").value;
+            var displayfullname=document.getElementById("fullnamedisplay");
+            displayfullname.innerHTML=fullname;
+                           
+            
+            var street=document.getElementById("street").value;
+            var displaystreet=document.getElementById("streetdisplay");
+            displaystreet.innerHTML=street;
+            
+            var citystatezip=document.getElementById("citystatezip").value;
+            var displaycitystatezip=document.getElementById("citystatezipdisplay");
+            displaycitystatezip.innerHTML=citystatezip;
+            
+            }
+        
+        function CalcPay()
+        {
+             var payrate =document.getElementById("payrate").value;
+             var hoursworked =document.getElementById("hoursworked").value;
+             var regpaycheck = 0;
+             var otcheck =0;
+             var totcheck =0;
+             
+             
+              
+             
+             if (hoursworked > 40)
+              {
+                regpaycheck = payrate * 40;
+                otcheck = ((payrate * 1.5) * (hoursworked - 40));
+                totcheck = regpaycheck + otcheck;
+                document.getElementById("regpaydisplay").innerHTML = regpaycheck;
+                document.getElementById("overtimedisplay").innerHTML = otcheck;
+                document.getElementById("totalpaydisplay").innerHTML = totcheck;
+            
+             }
+             else 
+             {
+                regpaycheck = payrate * hoursworked;
+                otcheck = 0;
+                totcheck = regpaycheck + otcheck;
+                document.getElementById("regpaydisplay").innerHTML = regpaycheck;
+                document.getElementById("overtimedisplay").innerHTML = otcheck;
+                document.getElementById("totalpaydisplay").innerHTML = totcheck;
+             
+             }
+             
+             
+        }
+        
+        
+    </script>
+</head>
+ 
+<body>
+<h1>Claire Hughes Assignment 2</h1>
+<hr>
+    <div class="div4">
+    <label>Saluation, First Name, Last Name:</label>
+    <input type="text" id="fullname">
+    <br>
+    <label>Street Address:</label>
+    <input type="text" id="street">
+    <br>
+    <label>City, State, Zip:</label>
+    <input type="text" id="citystatezip">
+    <br>
+    <label>Hourly Pay Rate:</label>
+    <input type="number" id="payrate">
+    <br>
+    <label> Current Work Week Hours Completed:</label>
+    <input type="number" id="hoursworked">
+    <br>
+    </div>
+    <div class="div5">
+    <button onclick= "ShowInfo()">Display Employee Information</button>
+    <button onclick= "CalcPay()">Calculate Employee Payment</button>
+    </div>
+    <hr>
+    <br>
+    <div class="div6">
+    <label id="fullnamedisplay" >The Employee's saluation and full name will be displayed here.</label>
+    <br>
+    <label id="streetdisplay">The Employee's street address will be displayed here.</label>
+    <br>
+    <label id="citystatezipdisplay">The Employee's city, state, and zip will be displayed here.</label>
+    <br>
+    <label id="regpaydisplay">The Employee's regular pay amount will be displayed here.</label>
+    <br>
+    <label id="overtimedisplay">The Employee's overtime pay amount will be displayed here.</label>
+    <br>
+    <label id="totalpaydisplay">The Employee's total pay amount will be displayed here.</label>
+    <br>
+    </div>
+    
+
+
+</body>
+</html>
