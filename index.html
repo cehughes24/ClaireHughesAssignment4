@@ -2,51 +2,77 @@
 
 <html>
 <head>
-    <title>Module 5 Assignment</title>
-    <link rel="stylesheet" type="text/css" href="styles/Assignment5.css" />
-    <script src="Assignment5.js"></script>
-
-</head>
-
+<title>Module 6 Demonstration</title>
+ <link rel="stylesheet" type="text/css" href="styles/Assignment6.css" />
+    <script src="Assignment6.js"></script>
 <body>
+    
+  
 
-<h1>Module 5 Assignment</h1>
- 
 <hr>
-
-<label>Please enter a Customer ID: </label>
-<input type="text" id="custid">
+<label> Fill out below if you are adding to customer table:</label>
 <br>
-
+<br>
+<label>Customer ID that is 5 uppercase letters: </label>
+<input type="text" id="CustID">
+<label> Customer Name:</label>
+<input type="text" id= "CustName">
+<label> Customer City:</label>
+<input type="text" id= "CustCity">
+<br>
+<br>
+<label> Fill out below if you are updating a customer shipping address:</label>
+<br>
+<br>
+<label>Order ID: </label>
+<input type="text" id="ordernumber">
+<label> Ship Address:</label>
+<input type="text" id= "shippingaddress">
+<label> Ship City:</label> 
+<input type="text" id= "shipcity">
+<label> Ship Name:</label>
+<input type="text" id= "shipname">
+<label> Ship Zip:</label>
+<input type="text" id= "shipcode">
+<br>
+<br>
+<label> Fill out below if you are deleting a customer from the database:</label>
+<br>
+<br>
+<label>Customer ID that is 5 uppercase letters: </label>
+<input type="text" id="CustID3">
+<br>
+<br>
+<br>
 <select onchange="MenuChoice()" id="menu">
 <option>What information are you looking for?</option>
-<option>Show me Customer Name, Customer ID, and City.</option>
-<option>Show me Product Names and Quantities ordered.</option>
-<option>Show me Order Date, Order ID, Ship Address, Ship City, Ship Name, Ship Post Code, and Shipped Date.</option>
+<option>Click me to to add a customer to the customer table.</option>
+<option>Click me to change the Ship to address on a customer order.</option>
+<option>Click me to delete a customer from the database.</option>
 </select>
 <hr>
 </section>
 <section id="section1" class="section1">
 <h2>
-    <label id="displaycustomerlist">section one display</label>
+    <label id="result">section 1 is displayed here</label>
 
 </h2>
 </section>
 <section id="section2" class="section2">
 <h2>
-<label id="section2display">section 2 is displayed here</label>
+<label id="result2">section 2 is displayed here</label>
 </h2>
-</section>
 
 </section>
-<section id="Section3" class="Section3">
+<section id="section3" class="section3">
 <h2>
              
-<label id="orderdisplay">Display section 3 orders here</label>
+<label id="result3">section 3 is displayed here</label>
 
 
 </h2>
 </section>
+
+
 </body>
 </html>
-
