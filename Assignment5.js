@@ -78,7 +78,7 @@ document.getElementById ("Section3").style.visibility = "hidden";
  }
 
 
- displaytext += "</table>" ;
+ displaytext += "</table>"; 
  document.getElementById("displaycustomerlist").innerHTML = displaytext; 
 
  }
