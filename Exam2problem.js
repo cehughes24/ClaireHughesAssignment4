@@ -217,7 +217,7 @@
                 function section4()
             
              {
-            window.confirm("Are ypu sure you want to delete this?");
+            window.confirm("Are you sure you want to delete this?");
                              
              var objRequest = new XMLHttpRequest();
              var url = "https://student.business.uab.edu/jsonwebservice/service1.svc/deleteCategory/";
